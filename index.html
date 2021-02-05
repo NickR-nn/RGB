@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Convertir RGB a CMYK</title>
+        <link rel="icon" href="favicon.png" />
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="clean">
+        <h1>Convertir RGB a CMYK</h1>
+        <div id="inputsWrapper" class="inputs-wrapper">
+            <div class="color-inputs" data-format="rgb">
+                <label for="rgb_red">
+                    R:
+                    <input
+                        type="number"
+                        min="0"
+                        max="255"
+                        id="rgb_red"
+                        class="color-input"
+                        data-color="red"
+                        maxlength="3"
+                    />
+                </label>
+
+                <label for="rgb_green">
+                    G:
+                    <input
+                        type="number"
+                        min="0"
+                        max="255"
+                        id="rgb_green"
+                        class="color-input"
+                        data-color="green"
+                        maxlength="3"
+                    />
+                </label>
+                <label for="rgb_blue">
+                    B:
+                    <input
+                        type="number"
+                        min="0"
+                        max="255"
+                        id="rgb_blue"
+                        class="color-input"
+                        data-color="blue"
+                        maxlength="3"
+                    />
+                </label>
+            </div>
+            <!-- Button Flecha  -->
+            <svg
+                id="swapColorFormat"
+                class="swap_format"
+                height="48"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"
+                />
+                <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+            <div class="color-inputs disabled" data-format="cmyk">
+                <label for="cmyk_cyan">
+                    C:
+                    <input
+                        type="number"
+                        readonly="readonly"
+                        min="0"
+                        max="1"
+                        id="cmyk_cyan"
+                        class="color-input"
+                        data-color="cyan"
+                        maxlength="3"
+                    />
+                </label>
+                <label for="cmyk_magenta">
+                    M:
+                    <input
+                        type="number"
+                        readonly="readonly"
+                        min="0"
+                        max="1"
+                        id="cmyk_magenta"
+                        class="color-input"
+                        data-color="magenta"
+                        maxlength="3"
+                    />
+                </label>
+                <label for="cmyk_yellow">
+                    Y:
+                    <input
+                        type="number"
+                        readonly="readonly"
+                        min="0"
+                        max="1"
+                        id="cmyk_yellow"
+                        class="color-input"
+                        data-color="yellow"
+                        maxlength="3"
+                    />
+                </label>
+                <label for="cmyk_black">
+                    K:
+                    <input
+                        type="number"
+                        readonly="readonly"
+                        min="0"
+                        max="1"
+                        id="cmyk_black"
+                        class="color-input"
+                        data-color="black"
+                        maxlength="3"
+                    />
+                </label>
+            </div>
+        </div>
+        <script src="./colorConverter.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
